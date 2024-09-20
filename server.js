@@ -15,10 +15,10 @@ const app = express();
 
 // Configure CORS options
 const corsOptions = {
-  origin: ['http://localhost:3000'], // Allow all origins (change to specific origins in production)
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed HTTP methods
-  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
-  optionsSuccessStatus: 204, // Some legacy browsers (IE11, various SmartTVs) choke on 204
+  origin: '*', // Allow all origins (change to specific origins in production)
+  // methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allowed HTTP methods
+  // credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+  // optionsSuccessStatus: 204, // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
 app.use(cors(corsOptions)); // Apply CORS middleware with options
