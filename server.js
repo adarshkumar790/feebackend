@@ -5,6 +5,7 @@ const studentRoutes = require('./routes/students');
 const feeRoutes = require('./routes/fees');
 const paymentRoutes = require('./routes/payments'); 
 const authRoutes = require('./routes/auth');
+const receiptRoutes = require('./routes/receipts');
 const cors = require('cors');
 
 dotenv.config();
@@ -28,6 +29,7 @@ app.use('/api/students', studentRoutes);
 app.use('/api/fees', feeRoutes);
 app.use('/api/payments', paymentRoutes);
 app.use('/api/admin', authRoutes); // Corrected the route path
+app.use('/api/receipts', receiptRoutes);
 
 const PORT = process.env.PORT || 5000;
 
